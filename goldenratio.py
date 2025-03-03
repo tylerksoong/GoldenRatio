@@ -59,9 +59,10 @@ t.seth(intital_rotation)
 
 precision = 15 #this number is 
 distance = 20 #how far the turtle should go
+turn_rate = 180/(math.pi*precision)
 for i in range(int(distance*precision)):
     t.forward(0.5333*size*speed_relative_to_t(i/precision)/precision)
-    t.left(180/(math.pi*precision)) #this number is degree change of the spiral per t, which is the derivate of arctan(slope)pi/180 with respect to t
+    t.left(turn_rate) #this number is degree change of the spiral per t, which is the derivate of arctan(slope)pi/180 with respect to t
 
 
 
